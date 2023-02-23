@@ -23,4 +23,12 @@
         tools:layout_editor_absoluteX="156dp"
         tools:layout_editor_absoluteY="219dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="깃허브 테스트"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="126dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
