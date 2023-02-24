@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991373333205",
+    "project_id": "stay-cancel-sos",
+    "storage_bucket": "stay-cancel-sos.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991373333205:android:cef0f61bd679089e43c85c",
+        "android_client_info": {
+          "package_name": "com.example.stay_cancel_sos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991373333205-dd6frjb83550uq7q9h2b8vnpsp0i2ejj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBvbZsnJiuzUufLRRgSmirXYUEmCDy2VY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991373333205-dd6frjb83550uq7q9h2b8vnpsp0i2ejj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
