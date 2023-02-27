@@ -37,26 +37,8 @@ class LoginActivity : AppCompatActivity() {
 
 
         joinBtn.setOnClickListener {
-            var email = emailEt.text.toString()
-            var password = passwordEt.text.toString()
-
-            auth.createUserWithEmailAndPassword(email,password) // 회원 가입
-                .addOnCompleteListener {
-                        result ->
-                    if(result.isSuccessful){
-                        Toast.makeText(this,"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT).show()
-                        if(auth.currentUser!=null){
-                            var intent = Intent(this, MainActivity::class.java)
-                            startActivity(intent)
-                        }
-                    }
-                    else if(result.exception?.message.isNullOrEmpty()){
-                        Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()
-                    }
-                    else{
-                        login(email,password)
-                    }
-                }
+            var intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
         }
     }
 

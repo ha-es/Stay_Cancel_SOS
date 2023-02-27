@@ -1,84 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="50px"
+    android:layout_marginRight="30px"
+    android:orientation="vertical">
 
 
 
-        <TableRow>
+    <ScrollView
+        android:id="scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--이메일-->
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="아이디(이메일)"
+                android:textColor="#FF000000"
+                android:textSize="50px" />
+            <EditText
+                android:id="@+id/Email_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="email"
+                android:inputType="textEmailAddress" />
+
+            <!--비밀번호-->
+            <TextView
+                android:id="@+id/pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="비밀번호"
+                android:textColor="#FF000000"
+                android:textSize="50px" />
+            <EditText
+                android:id="@+id/Pwd_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="password"
+                android:inputType="textPassword" />
+
+            <!--이름-->
             <TextView
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50px"
-                android:layout_marginLeft="50px"
-                android:layout_marginRight="30px"
-                android:textSize="50px"
+                android:text="이름"
                 android:textColor="#FF000000"
-                android:text="이름" />
-
+                android:textSize="50px" />
             <EditText
                 android:id="@+id/Name_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50px"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Name" />
-        </TableRow>
+                android:hint="Name"
+                android:inputType="textPersonName" />
 
-    <TableRow>
-        <TextView
-            android:id="@+id/email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50px"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="30px"
-            android:textSize="50px"
-            android:textColor="#FF000000"
-            android:text="이메일" />
-
-        <EditText
-            android:id="@+id/Email_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50px"
-            android:ems="10"
-            android:inputType="textEmailAddress"
-            android:hint="email" />
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:id="@+id/pwd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50px"
-            android:layout_marginLeft="50px"
-            android:layout_marginRight="30px"
-            android:textSize="50px"
-            android:textColor="#FF000000"
-            android:text="비밀번호" />
-
-        <EditText
-            android:id="@+id/Pwd_et"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50px"
-            android:ems="10"
-            android:inputType="textPassword"
-            android:hint="password" />
-    </TableRow>
+            <!--휴대폰번호-->
+            <TextView
+                android:id="@+id/phoneNum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="휴대폰번호"
+                android:textColor="#FF000000"
+                android:textSize="50px" />
+            <EditText
+                android:id="@+id/Phonenum_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="01012345678"
+                android:inputType="textPersonName" />
 
 
+            <!--생년월일-->
+            <TextView
+                android:id="@+id/Birth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="생년월일"
+                android:textColor="#FF000000"
+                android:textSize="50px" />
+
+            <DatePicker
+                android:id="@+id/dpSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner" />
 
 
+            <Button
+                android:id="@+id/join_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:background="@drawable/round_button"
+                android:text="완료" />
 
 
+        </LinearLayout>
+    </ScrollView>
 
+</LinearLayout>
 
 
 
-</TableLayout>
+
+
+
+
