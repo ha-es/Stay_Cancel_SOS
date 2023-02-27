@@ -21,12 +21,12 @@
         android:layout_weight="1"
         android:text="TextView" />
 
-    <TextView
-        android:id="@+id/name_tv"
+    <Button
+        android:id="@+id/logout_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="TextView" />
+        android:text="Button" />
 
 </LinearLayout>
 
