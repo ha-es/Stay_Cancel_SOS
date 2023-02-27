@@ -13,6 +13,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var emailEt: EditText
     lateinit var passwordEt: EditText
     lateinit var loginBtn: Button
+    lateinit var joinBtn: Button
 
     lateinit var auth: FirebaseAuth
 
@@ -25,8 +26,17 @@ class LoginActivity : AppCompatActivity() {
         emailEt = findViewById(R.id.Email_et)
         passwordEt = findViewById(R.id.Pwd_et)
         loginBtn = findViewById(R.id.button)
+        joinBtn = findViewById(R.id.join_btn)
 
         loginBtn.setOnClickListener {
+            var email = emailEt.text.toString()
+            var password = passwordEt.text.toString()
+
+            login(email,password)
+        }
+
+
+        joinBtn.setOnClickListener {
             var email = emailEt.text.toString()
             var password = passwordEt.text.toString()
 
