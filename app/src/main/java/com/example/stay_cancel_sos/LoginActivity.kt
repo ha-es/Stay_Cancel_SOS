@@ -50,6 +50,9 @@ class LoginActivity : AppCompatActivity() {
                     var intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                 }
+                else if(result.exception?.message.isNullOrEmpty()){
+                    Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()
+                }
             }
     }
 }

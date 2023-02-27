@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginLeft="50px"
-    android:layout_marginRight="30px"
     android:orientation="vertical">
 
-
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:minHeight="?attr/actionBarSize">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="회원가입"-->
+<!--            android:textSize="20dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center" />-->
+<!--    </androidx.appcompat.widget.Toolbar>-->
 
     <ScrollView
-        android:id="scroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="30px">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,7 +39,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50px"
+                android:layout_marginTop="30dp"
                 android:text="아이디(이메일)"
                 android:textColor="#FF000000"
                 android:textSize="50px" />
@@ -111,13 +126,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50px"
+                android:layout_marginBottom="30dp"
                 android:background="@drawable/round_button"
                 android:text="완료" />
 
 
         </LinearLayout>
     </ScrollView>
-
 </LinearLayout>
 
 
