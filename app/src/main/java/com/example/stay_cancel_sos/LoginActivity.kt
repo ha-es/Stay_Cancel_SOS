@@ -14,6 +14,7 @@ class LoginActivity : AppCompatActivity() {
     lateinit var passwordEt: EditText
     lateinit var loginBtn: Button
     lateinit var joinBtn: Button
+    lateinit var go_main: Button
 
     lateinit var auth: FirebaseAuth
 
@@ -28,16 +29,33 @@ class LoginActivity : AppCompatActivity() {
         loginBtn = findViewById(R.id.button)
         joinBtn = findViewById(R.id.join_btn)
 
+        /* 로그인 없이 메인 이동 */
+        go_main = findViewById(R.id.go_main)
+
         loginBtn.setOnClickListener {
             var email = emailEt.text.toString()
             var password = passwordEt.text.toString()
 
-            login(email,password)
+            if(email.isEmpty() || password.isEmpty())
+            {
+                Toast.makeText(this,"아이디와 비밀번호를 입력해주세요.",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                login(email,password)
+            }
+
         }
 
 
         joinBtn.setOnClickListener {
             var intent = Intent(this, JoinActivity::class.java)
+            startActivity(intent)
+        }
+
+
+        /* 로그인 없이 메인 이동 */
+        go_main.setOnClickListener {
+            var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }
@@ -52,7 +70,8 @@ class LoginActivity : AppCompatActivity() {
                 }
                 else {
                     //틀렸을 때
-                    Toast.makeText(this,result.exception?.message,Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this,result.exception?.message,Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"아이디와 비밀번호를 확인해주세요.",Toast.LENGTH_SHORT).show()
                     }
 
             }

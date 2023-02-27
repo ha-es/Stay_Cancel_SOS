@@ -32,39 +32,28 @@ class JoinActivity : AppCompatActivity() {
         join_btn = findViewById(R.id.join_btn)
 
 
-
         join_btn.setOnClickListener {
             var email = emailEt.text.toString()
             var password = passwordEt.text.toString()
             var name = nameEt.text.toString()
             var phoneNum = phoneNumEt.text.toString()
 
-            //필수항목 입력하지 않은 경우
-            if (email.isEmpty() || password.isEmpty() || name.isEmpty()|| phoneNum.isEmpty()){
-            Toast.makeText(this,"올바르게 입력해 주세요.",Toast.LENGTH_SHORT).show()
-            }
-            else{
-                auth.createUserWithEmailAndPassword(email,password) // 회원 가입
-                    .addOnCompleteListener {
-                            result ->
-                        if(result.isSuccessful){
-                            Toast.makeText(this,"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT).show()
-                            if(auth.currentUser!=null){
-                                var intent = Intent(this, MainActivity::class.java)
-                                startActivity(intent)
 
-                            }
+            auth.createUserWithEmailAndPassword(email,password) // 회원 가입
+                .addOnCompleteListener {
+                        result ->
+                    if(result.isSuccessful){
+                        Toast.makeText(this,"회원가입이 완료되었습니다.",Toast.LENGTH_SHORT).show()
+                        if(auth.currentUser!=null){
+                            var intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+
                         }
-                        else {
-                            Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()
-                        }
-//                    else if(result.exception?.message.isNullOrEmpty()){
-//                        Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()
-//                    }
+                    } else if(result.exception?.message.isNullOrEmpty()){
+                        Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()
                     }
-            }
-
-
+                }
         }
     }
 }
+

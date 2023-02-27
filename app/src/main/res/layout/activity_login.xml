@@ -65,5 +65,14 @@
         android:backgroundTint="#AAB2BD"
         android:text="회원가입" />
 
+    <Button
+        android:id="@+id/go_main"
+        android:background="@drawable/round_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#AAB2BD"
+        android:text="메인으로 바로가기" />
+
 
 </LinearLayout>
