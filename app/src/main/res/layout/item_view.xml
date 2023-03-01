@@ -4,6 +4,8 @@
     android:layout_height="wrap_content"
     android:paddingHorizontal="20dp"
     android:paddingVertical="10dp"
+    android:background="@drawable/round_button"
+    android:backgroundTint="@color/gray"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -19,10 +21,11 @@
         android:id="@+id/title_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="제목"
+        android:text="title"
         android:textStyle="bold"
         android:layout_marginLeft="20dp"
-        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
         android:textColor="@color/black"
         app:layout_constraintLeft_toRightOf="@id/img_rv_photo"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -32,25 +35,32 @@
         android:id="@+id/price_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="가격"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:textSize="15sp"
-        android:textColor="#b5b5b5"
+        android:layout_marginTop="5dp"
+        android:text="price"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintLeft_toRightOf="@id/img_rv_photo"
-        app:layout_constraintTop_toBottomOf="@id/title_tv"/>
+        app:layout_constraintTop_toBottomOf="@id/title_tv" />
 
     <TextView
         android:id="@+id/name_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="작성자"
-        android:layout_marginTop="10dp"
+        android:text="name"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="20dp"
-        android:textSize="15sp"
+        android:textSize="13sp"
         android:textColor="#b5b5b5"
         app:layout_constraintLeft_toRightOf="@id/img_rv_photo"
         app:layout_constraintTop_toBottomOf="@id/price_tv"/>
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="2px"-->
+<!--        android:background="@color/gray"-->
+<!--        android:layout_marginTop="10px"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/img_rv_photo"/>-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
