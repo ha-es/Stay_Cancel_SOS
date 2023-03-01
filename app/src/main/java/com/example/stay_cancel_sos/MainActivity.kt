@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var name : TextView
     lateinit var auth:FirebaseAuth
     lateinit var chat_btn: Button
+    lateinit var pension_btn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +27,16 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, ChatActivity::class.java)
             startActivity(intent)
         }
+
+        pension_btn = findViewById(R.id.pension_btn)
+        pension_btn.setOnClickListener {
+            var intent = Intent(this, PensionActivity::class.java)
+            startActivity(intent)
+        }
         auth = FirebaseAuth.getInstance()
         email = findViewById(R.id.email_tv)
-
         email.text = auth.currentUser?.email
+
 
 
 

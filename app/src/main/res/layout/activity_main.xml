@@ -7,34 +7,71 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView4"
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="로그인 되었습니다!" />
+        android:layout_marginTop="50px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_weight="1">
 
-    <TextView
-        android:id="@+id/email_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+        <TableRow
+            android:layout_marginTop="50px">
 
-    <Button
-        android:id="@+id/logout_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Button" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="로그인 되었습니다!" />
 
-    <Button
-        android:id="@+id/chat_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="chat" />
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TextView" />
+            <Button
+                android:id="@+id/Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="로그아웃" />
 
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="50px">
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/chat_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="chat" />
+        </TableRow>
+
+        <TableRow
+            android:layout_marginTop="50px">
+
+            <Button
+                android:id="@+id/pension_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="펜션" />
+
+        </TableRow>
+
+    </TableLayout>
 </LinearLayout>
 
 
