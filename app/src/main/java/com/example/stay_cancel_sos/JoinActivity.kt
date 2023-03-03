@@ -25,6 +25,7 @@ class JoinActivity : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
+
         emailEt = findViewById(R.id.Email_et)
         passwordEt = findViewById(R.id.Pwd_et)
         nameEt = findViewById(R.id.Name_et)
@@ -37,6 +38,7 @@ class JoinActivity : AppCompatActivity() {
             var password = passwordEt.text.toString()
             var name = nameEt.text.toString()
             var phoneNum = phoneNumEt.text.toString()
+
 
 
             auth.createUserWithEmailAndPassword(email,password) // 회원 가입

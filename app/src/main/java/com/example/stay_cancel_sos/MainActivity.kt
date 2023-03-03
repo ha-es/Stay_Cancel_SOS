@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var auth:FirebaseAuth
     lateinit var chat_btn: Button
     lateinit var pension_btn: Button
+    lateinit var logout_btn : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,7 +38,12 @@ class MainActivity : AppCompatActivity() {
         email = findViewById(R.id.email_tv)
         email.text = auth.currentUser?.email
 
-
+        logout_btn = findViewById(R.id.logout_btn)
+        logout_btn.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+            var intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

@@ -7,6 +7,8 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 
 class LoginActivity : AppCompatActivity() {
@@ -58,6 +60,11 @@ class LoginActivity : AppCompatActivity() {
             var intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+
+//        val database: FirebaseDatabase = FirebaseDatabase.getInstance()
+//        val myRef: DatabaseReference = database.getReference("message")
+//        myRef.setValue("hello")
     }
 
     fun login(email:String,password:String){
