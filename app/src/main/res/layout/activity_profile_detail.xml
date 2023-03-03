@@ -25,18 +25,37 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <!-- 숙소 이름-->
-        <TextView
-            android:id="@+id/title_tv"
-            android:layout_width="wrap_content"
+        <TableLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:text="title"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/img_profile" />
+            app:layout_constraintTop_toBottomOf="@id/img_profile">
+            <TableRow>
+                <TextView
+                    android:id="@+id/title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="title"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+                <ToggleButton
+                    android:id="@+id/like_btn"
+                    android:onClick="onCustomToogleClick"
+                    android:textOn=""
+                    android:textOff=""
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/toggle_selector"></ToggleButton>
+
+
+            </TableRow>
+        </TableLayout>
+
 
         <View
             android:id="@+id/lineView"
@@ -52,8 +71,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            >
+            android:layout_marginRight="20dp">
 
             <TableRow>
 

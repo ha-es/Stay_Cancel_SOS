@@ -1,7 +1,9 @@
 package com.example.stay_cancel_sos
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_profile_detail.*
@@ -32,5 +34,9 @@ class ProfileDetailActivity : AppCompatActivity() {
         name_tv.text =datas.name
         reg_btn.text=datas.title.substring(0 until 3)
         stay_btn.text = type1
+    }
+
+    fun onCustomToogleClick(view: View) {
+        Toast.makeText(this, "CustomToogle", Toast.LENGTH_SHORT).show()
     }
 }
