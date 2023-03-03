@@ -41,17 +41,27 @@
                     android:textSize="25sp"
                     android:textStyle="bold"/>
 
-                <ToggleButton
-                    android:id="@+id/like_btn"
-                    android:onClick="onCustomToogleClick"
-                    android:textOn=""
-                    android:textOff=""
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="80dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/toggle_selector"></ToggleButton>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+
+                    android:text="                        " />
+
+                <ToggleButton
+                    android:id="@+id/button_heart"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/button_favorite"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </TableRow>
         </TableLayout>
