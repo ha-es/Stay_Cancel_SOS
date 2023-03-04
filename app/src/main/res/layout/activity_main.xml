@@ -33,42 +33,39 @@
                 android:layout_height="wrap_content"
                 android:text="로그아웃" />
         </TableRow>
-
-        <TableRow>
-            <Button
-                android:id="@+id/Button"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/chat_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="chat" />
-        </TableRow>
-
-
-        <TableRow>
-            <Button
-                android:id="@+id/pension_btn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="펜션" />
-        </TableRow>
     </TableLayout>
-
     <fragment
-        android:id="@+id/nav_host"
-        app:navGraph="@navigation/nav_graph"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        app:defaultNavHost="true"
+            android:id="@+id/nav_host"
+            app:navGraph="@navigation/nav_graph"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/nav_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/nav_bar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/nav_host"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/chat_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="chat" />
+
+
+    <Button
+        android:id="@+id/pension_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="펜션" />
+
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -84,7 +81,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nav_host"/>
+        app:layout_constraintTop_toBottomOf="parent"/>
 
 
 
