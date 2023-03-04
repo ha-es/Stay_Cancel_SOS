@@ -1,16 +1,20 @@
 package com.example.stay_cancel_sos
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
+import com.example.stay_cancel_sos.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityMainBinding
+
+
     lateinit var email: TextView
     lateinit var name : TextView
     lateinit var auth:FirebaseAuth
@@ -20,8 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
 
+        initBinding()
+        initNavigation()
 
         chat_btn = findViewById(R.id.chat_btn)
         chat_btn.setOnClickListener {
@@ -45,9 +51,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
 
+    private fun initBinding() {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+    }
 
-
-
+    private fun initNavigation() {
+        NavigationUI.setupWithNavController(binding.navBar, findNavController(R.id.nav_host))
     }
 }

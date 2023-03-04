@@ -4,10 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+
 
 class JoinActivity : AppCompatActivity() {
 
@@ -18,6 +22,9 @@ class JoinActivity : AppCompatActivity() {
     //생년월일 추가 예정
     lateinit var join_btn: Button
     lateinit var auth: FirebaseAuth
+
+
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +45,8 @@ class JoinActivity : AppCompatActivity() {
             var password = passwordEt.text.toString()
             var name = nameEt.text.toString()
             var phoneNum = phoneNumEt.text.toString()
-
-
+            val user = FirebaseAuth.getInstance().currentUser
+            val db = FirebaseFirestore.getInstance()
 
             auth.createUserWithEmailAndPassword(email,password) // 회원 가입
                 .addOnCompleteListener {
@@ -49,7 +56,7 @@ class JoinActivity : AppCompatActivity() {
                         if(auth.currentUser!=null){
                             var intent = Intent(this, MainActivity::class.java)
                             startActivity(intent)
-
+                            db.collection("user").document("user.toString()")
                         }
                     } else if(result.exception?.message.isNullOrEmpty()){
                         Toast.makeText(this,"오류가 발생했습니다.",Toast.LENGTH_SHORT).show()

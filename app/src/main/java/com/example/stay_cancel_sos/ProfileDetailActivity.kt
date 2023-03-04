@@ -1,5 +1,6 @@
 package com.example.stay_cancel_sos
 
+import android.app.Person
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
@@ -39,6 +40,10 @@ class ProfileDetailActivity : AppCompatActivity() {
             )
         })
 
+        button_heart.setOnClickListener{
+
+        }
+
         /* togglebtn(button_heart) */
         scaleAnimation = ScaleAnimation(
             0.7f,
@@ -63,7 +68,9 @@ class ProfileDetailActivity : AppCompatActivity() {
         name_tv.text =datas.name
         reg_btn.text=datas.title.substring(0 until 3)
         stay_btn.text = type1
+
     }
+
 
     fun onCustomToogleClick(view: View) {
         Toast.makeText(this, "CustomToogle", Toast.LENGTH_SHORT).show()

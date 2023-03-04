@@ -55,6 +55,7 @@
                     android:layout_height="50dp"
                     android:background="@drawable/button_favorite"
                     android:checked="false"
+                    android:fillAfter="true"
                     android:text=""
                     android:textOff=""
                     android:textOn=""
