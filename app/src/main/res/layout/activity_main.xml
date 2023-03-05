@@ -34,39 +34,18 @@
                 android:text="로그아웃" />
         </TableRow>
     </TableLayout>
+
+
     <fragment
-            android:id="@+id/nav_host"
-            app:navGraph="@navigation/nav_graph"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            app:defaultNavHost="true"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@id/nav_bar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-    <Button
-        android:id="@+id/Button"
+        android:id="@+id/nav_host"
+        app:navGraph="@navigation/nav_graph"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/nav_host"
-        android:text="Button" />
-
-    <Button
-        android:id="@+id/chat_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="chat" />
-
-
-    <Button
-        android:id="@+id/pension_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="펜션" />
-
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

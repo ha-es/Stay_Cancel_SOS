@@ -13,6 +13,13 @@
         tools:layout="@layout/fragment_home"/>
 
     <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.stay_cancel_sos.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat"/>
+
+
+    <fragment
         android:id="@+id/addFragment"
         android:name="com.example.stay_cancel_sos.AddFragment"
         android:label="AddFragment"

@@ -13,33 +13,31 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityMainBinding
-
-
     lateinit var email: TextView
     lateinit var name : TextView
-    lateinit var auth:FirebaseAuth
-    lateinit var chat_btn: Button
-    lateinit var pension_btn: Button
     lateinit var logout_btn : Button
+
+    lateinit var auth:FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
 
+        /*하단 nav*/
         initBinding()
         initNavigation()
 
-        chat_btn = findViewById(R.id.chat_btn)
-        chat_btn.setOnClickListener {
-            var intent = Intent(this, ChatActivity::class.java)
-            startActivity(intent)
-        }
-
-        pension_btn = findViewById(R.id.pension_btn)
-        pension_btn.setOnClickListener {
-            var intent = Intent(this, PensionActivity::class.java)
-            startActivity(intent)
-        }
+//        chat_btn = findViewById(R.id.chat_btn)
+//        chat_btn.setOnClickListener {
+//            var intent = Intent(this, ChatActivity::class.java)
+//            startActivity(intent)
+//        }
+//
+//        pension_btn = findViewById(R.id.pension_btn)
+//        pension_btn.setOnClickListener {
+//            var intent = Intent(this, PensionActivity::class.java)
+//            startActivity(intent)
+//        }
         auth = FirebaseAuth.getInstance()
         email = findViewById(R.id.email_tv)
         email.text = auth.currentUser?.email
