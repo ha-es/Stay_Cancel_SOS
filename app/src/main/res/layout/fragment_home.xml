@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".HomeFragment">
 
@@ -12,6 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="HomeFragment 입니다 ~" />
+
+
+    <androidx.appcompat.widget.SearchView
+    android:id="@+id/search_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:queryBackground="@null"
+    app:queryHint="검색어를 입력하세요"
+
+    />
 
     <Button
         android:id="@+id/Button"
@@ -34,5 +44,7 @@
         android:layout_height="wrap_content"
         android:textSize="10sp"
         android:text="펜션" />
+
+
 
 </LinearLayout>
